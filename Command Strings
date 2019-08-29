@@ -1,0 +1,57 @@
+github repo: https://github.com/gpitcairn/arduino-team-18
+
+Graham's file path to project folder: ‎⁨/Users/grahampitcairn/Documents/MCIT/CIT\ 595/Project
+
+Compile: clang xxxxx.c -o executable_name
+
+#ifndef __SERVER_H__
+#define __SERVER_H__
+
+
+// this file is server.h
+
+// put all #include’s here
+#include “arduino.h”
+
+
+void* start_server(void* ptr);
+
+/**
+ * returns 0 if GET
+ * returns 1 if POST
+ * returns -1 on wtf
+ */
+int request_type(char* request_text);
+
+int send_data(char* data);
+
+
+#endif
+
+// this file is arduino.h
+
+// put all #include’s here
+
+float current_temp;
+
+
+// random arduino funcs...
+
+
+void read_usb();
+
+void write_usb();
+
+---------------
+
+// this is arduino.c
+
+#include “arduino.h"
+
+// functions....
+void read_usb()
+{
+	// doing stuff
+	current_temp = 2131;
+
+} 
